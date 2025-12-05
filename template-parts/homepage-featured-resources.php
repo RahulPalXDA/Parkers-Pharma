@@ -1,3 +1,8 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
 <!-- educational resource start -->
 <section class="education-resource-sec">
     <div class="container-fluid">

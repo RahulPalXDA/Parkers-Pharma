@@ -1,3 +1,8 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
 <!-- about agri veta start -->
 <div class="about-agri-veta-sec">
     <div class="custom-container">
@@ -35,7 +40,8 @@
                                 the_row(); ?>
                                 <div class="abt-card">
                                     <h3><?php echo esc_html(get_sub_field('counter_number')); ?>
-                                        <?php echo esc_html(get_sub_field('counter_postfix')); ?></h3>
+                                        <?php echo esc_html(get_sub_field('counter_postfix')); ?>
+                                    </h3>
                                     <h5><?php echo esc_html(get_sub_field('counter_title')); ?></h5>
                                     <p><?php echo esc_html(get_sub_field('counter_description')); ?></p>
                                 </div>

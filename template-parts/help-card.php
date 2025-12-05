@@ -1,4 +1,9 @@
-<!-- here to help start -->
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
+<!-- help card start -->
 <section class="here-help-sec">
     <div class="custom-container">
         <div class="here-help-box">

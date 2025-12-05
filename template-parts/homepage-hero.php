@@ -1,3 +1,8 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
 <!-- hero banner -->
 <section class="home-hero-banner">
     <div class="hero-poster"></div>

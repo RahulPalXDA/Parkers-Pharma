@@ -1,4 +1,9 @@
-<!-- Comprehensive Solutions start -->
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
+<!-- comprehensive solutions sec start -->
 <section class="comprehensive-solutions-sec">
     <div class="custom-container">
         <div class="global-header">

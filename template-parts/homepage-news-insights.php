@@ -1,3 +1,8 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
 <!-- stay update news start -->
 <section class="stay-update-sec">
     <div class="custom-container">
