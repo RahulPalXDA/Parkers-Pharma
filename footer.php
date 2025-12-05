@@ -3,7 +3,7 @@
     <div class="custom-container">
         <div class="flex-box">
             <div class="footer-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png" alt="">
+                <?php the_custom_logo(); ?>
             </div>
             <div class="footer-nav">
                 <h3 class="ftr-header"><?php esc_html_e('Quick Links', 'parkers-pharma'); ?></h3>
@@ -63,7 +63,8 @@
             <div class="footer-nav">
                 <h3 class="ftr-header"><?php esc_html_e('Newsletter', 'parkers-pharma'); ?></h3>
                 <div class="subscribe-section">
-                    <input type="email" placeholder="<?php esc_attr_e('Enter email address', 'parkers-pharma'); ?>" class="email-input">
+                    <input type="email" placeholder="<?php esc_attr_e('Enter email address', 'parkers-pharma'); ?>"
+                        class="email-input">
                     <button class="global-solid-button"><?php esc_html_e('SUBSCRIBE', 'parkers-pharma'); ?></button>
                 </div>
             </div>
