@@ -82,7 +82,7 @@ function extractYouTubeID(url) {
 const videoID = extractYouTubeID(videoURL);
 
 // Create embed URL with API enabled
-iframe.src = `https://www.youtube.com/embed/${videoID}?enablejsapi=1&mute=1`;
+iframe.src = `https://www.youtube.com/embed/${videoID}?enablejsapi=1&mute=1&controls=0&rel=0&iv_load_policy=3`;
 
 
 // STEP 2: Load YouTube Video API

@@ -1,6 +1,7 @@
 <!-- hero banner -->
 <section class="home-hero-banner">
     <div class="hero-poster"></div>
+    <div class="video-blocker"></div>
     <iframe id="heroVideo" data-video="<?php echo esc_attr(get_field('video_link')); ?>"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
