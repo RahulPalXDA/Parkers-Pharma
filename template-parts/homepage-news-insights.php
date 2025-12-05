@@ -41,7 +41,7 @@
                 <?php endwhile;
                 wp_reset_postdata();
             else: ?>
-                <?php echo '<p>No posts found.</p>'; ?>
+                <?php echo '<p>' . esc_html__('No posts found.', 'parkers-pharma') . '</p>'; ?>
             <?php endif; ?>
         </div>
     </div>

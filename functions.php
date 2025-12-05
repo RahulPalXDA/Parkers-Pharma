@@ -14,6 +14,9 @@ function basic_theme_setup()
         'flex-width' => true,
     ));
     add_theme_support('post-thumbnails');
+
+    // Load theme text domain
+    load_theme_textdomain('parkers-pharma', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'basic_theme_setup');
 
