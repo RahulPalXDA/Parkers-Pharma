@@ -480,22 +480,28 @@ nav.top-navbar {
 nav.top-navbar li.nav-item.dropdown {
   display: flex;
 }
-.custom-logo-link img{
+
+.custom-logo-link img {
   width: 107px;
   transition: width 0.1s ease;
 }
+
 .top-navbar ul.navbar-nav {
   margin: 0 auto;
 }
-.top-navbar.sticky .navbar-wrapper{
+
+.top-navbar.sticky .navbar-wrapper {
   align-items: center;
 }
-.top-navbar.sticky nav.navbar .navbar-wrapper .collapse.navbar-collapse{
+
+.top-navbar.sticky nav.navbar .navbar-wrapper .collapse.navbar-collapse {
   top: 0px;
 }
+
 .top-navbar.sticky .custom-logo-link img {
-    width:72px;
+  width: 72px;
 }
+
 .top-navbar.sticky {
   position: sticky;
   position: -webkit-sticky;
@@ -504,13 +510,15 @@ nav.top-navbar li.nav-item.dropdown {
   z-index: 99;
   background-color: var(--white);
   transition: all 0.3s ease-in-out;
-  box-shadow: 2px 1px 17px 1px #e5e5e5;  
+  box-shadow: 2px 1px 17px 1px #e5e5e5;
   animation: slideDown 0.35s ease-out;
 }
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -616,10 +624,13 @@ li.nav-item.dropdown:hover .dropdown-menu {
   width: 100%;
   z-index: 0;
 }
-.banner-video-button img.pause-btn-icon, .banner-video-button.playVideo img.play-btn-icon{
+
+.banner-video-button img.pause-btn-icon,
+.banner-video-button.playVideo img.play-btn-icon {
   display: none;
 }
-.banner-video-button img{
+
+.banner-video-button img {
   transition: all 0.1s ease-in-out;
   animation: pulse-border 3000ms ease-out infinite;
 }
@@ -629,6 +640,7 @@ li.nav-item.dropdown:hover .dropdown-menu {
     transform: translateX(0%) translateY(0%) translateZ(0) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateX(0%) translateY(0%) translateZ(0) scale(1.2);
     opacity: 0.5;
@@ -636,21 +648,71 @@ li.nav-item.dropdown:hover .dropdown-menu {
 }
 
 
-.banner-video-button:hover img{
+.banner-video-button:hover img {
   cursor: pointer;
 }
-.banner-video-button.playVideo img.pause-btn-icon{
+
+.banner-video-button.playVideo img.pause-btn-icon {
   display: block;
 }
 
 /* hero banner */
 
+.hero-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/HERO-BG.jpg') center center / cover no-repeat;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  /* Let clicks pass through to iframe if needed, though buttons control it */
+}
+
+/* When video is playing, hide poster */
+.home-hero-banner.video-playing .hero-poster {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ensure iframe is behind poster initially but visible when playing */
+.home-hero-banner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Ensure content stays on top */
+.home-hero-banner .custom-container {
+  z-index: 3;
+}
+
+/* Overlay stays on top of video but below content */
+.home-hero-banner::after {
+  z-index: 2;
+  pointer-events: none;
+  /* Allow interaction with video controls if needed */
+}
+
+.banner-video-button img.pause-btn-icon,
+.banner-video-button.playVideo img.play-btn-icon {
+  display: none;
+}
+
 .global-header {
   margin-bottom: 40px;
 }
+
 .global-header p {
-    margin: 23px 0px;
+  margin: 23px 0px;
 }
+
 .global-header h5 {
   max-width: max-content;
   position: relative;
@@ -757,8 +819,7 @@ li.nav-item.dropdown:hover .dropdown-menu {
   background: linear-gradient(180deg,
       rgba(16, 18, 15, 0) 34.71%,
       rgba(16, 18, 15, 0.79) 63.49%,
-      #10120F 92.95%
-  );
+      #10120F 92.95%);
   transition: opacity 0.5s ease;
   opacity: 1;
   z-index: -1;
@@ -772,8 +833,7 @@ li.nav-item.dropdown:hover .dropdown-menu {
   background: linear-gradient(180deg,
       rgba(16, 18, 15, 0) 34.71%,
       rgba(0, 100, 0, 0.59) 63.49%,
-      #006400 92.95%
-  );
+      #006400 92.95%);
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: -1;
@@ -832,25 +892,30 @@ li.nav-item.dropdown:hover .dropdown-menu {
 .stay-update-sec {
   padding: 100px 0px;
 }
+
 .stay-update-sec .global-header {
   max-width: 500px;
   margin: 0 auto 50px;
   text-align: center;
 }
+
 .stay-update-sec .global-header h5 {
   margin: auto;
 }
+
 .news-item .image-box {
   overflow: hidden;
   height: 320px;
   border-radius: 15px;
 }
+
 .news-item .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
+
 .news-item .cntn-box {
   display: flex;
   flex-direction: column;
@@ -860,8 +925,9 @@ li.nav-item.dropdown:hover .dropdown-menu {
 }
 
 .news-item:hover .image-box img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
+
 .news-item .cntn-box p {
   font-weight: 400;
   font-size: 16px;
@@ -873,57 +939,66 @@ li.nav-item.dropdown:hover .dropdown-menu {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .news-item .cntn-box h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 37px;
 }
+
 .news-item .cntn-box h6 {
   font-weight: 500;
   font-size: 15px;
   line-height: 26px;
   color: var(--dark-green);
 }
+
 /* end */
 
 /* start */
 .education-resource-sec {
-    padding: 30px 15px;
-}
-.education-resource-sec .cntn-box {
-    background-color: var(--light-yellow-400);
-    height: 100%;
-    padding: 80px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.education-resource-sec .cntn-rgt-thumb {
-    text-align: right;
-}
-.education-resource-sec .image-box {
-    height: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-}
-.education-resource-sec .image-box img {
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-    height: 100%;
-    object-fit: cover;
+  padding: 30px 15px;
 }
 
-.education-resource-sec .image-box img:hover, .about-agri-veta-sec .image-box:hover img {
-    filter:grayscale(1);
+.education-resource-sec .cntn-box {
+  background-color: var(--light-yellow-400);
+  height: 100%;
+  padding: 80px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education-resource-sec .cntn-rgt-thumb {
+  text-align: right;
+}
+
+.education-resource-sec .image-box {
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.education-resource-sec .image-box img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-resource-sec .image-box img:hover,
+.about-agri-veta-sec .image-box:hover img {
+  filter: grayscale(1);
 }
 
 /* help box start */
 .here-help-sec {
-    margin-bottom: -130px;
+  margin-bottom: -130px;
 }
-.here-help-box{
-  background:var(--dark-green) url('../images/help-bg.png')no-repeat;
+
+.here-help-box {
+  background: var(--dark-green) url('../images/help-bg.png')no-repeat;
   background-size: cover;
   background-position: right center;
   padding: 80px;
@@ -931,7 +1006,8 @@ li.nav-item.dropdown:hover .dropdown-menu {
   overflow: hidden;
   position: relative;
 }
-.here-help-box::after{
+
+.here-help-box::after {
   content: '';
   background: linear-gradient(90deg, #006400 22.13%, rgba(0, 100, 0, 0.876214) 34.86%, rgba(0, 100, 0, 0) 56.35%);
   position: absolute;
@@ -941,7 +1017,8 @@ li.nav-item.dropdown:hover .dropdown-menu {
   width: 100%;
   z-index: 0;
 }
-.here-help-box .content-box{
+
+.here-help-box .content-box {
   max-width: 550px;
   color: var(--white);
   display: flex;
@@ -949,10 +1026,11 @@ li.nav-item.dropdown:hover .dropdown-menu {
   gap: 18px;
   align-items: start;
   position: relative;
-  z-index:2;
+  z-index: 2;
 }
+
 .here-help-box .content-box h2 span {
-    display: block;
+  display: block;
 }
 
 /* footer start */
@@ -961,9 +1039,11 @@ footer.footer {
   background-color: var(--dark-black-500);
   color: var(--white);
 }
+
 .footer.top-ftr-space {
-    padding-top: 200px;
+  padding-top: 200px;
 }
+
 footer.footer a {
   color: var(--white);
 }

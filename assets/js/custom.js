@@ -26,44 +26,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
     themeToggle.addEventListener("click", function (event) {
       event.preventDefault();
 
-      if (html.getAttribute("data-bs-theme") === "dark") {} else {
+      if (html.getAttribute("data-bs-theme") === "dark") { } else {
         html.setAttribute("data-bs-theme", "dark");
       }
     });
   }
 });
 
-jQuery(function($){
-// client feedback owl slider
-$('.client-quote').owlCarousel({
-  nav: true,
-  navText: [
-    '<button class="owl-prev"><i class="fa-solid fa-arrow-left"></i></button>',
-    '<button class="owl-next"><i class="fa-solid fa-arrow-right"></i></button>'
-  ],
-  dots: true,
-  items: 1,
-  loop: true,
-  margin: 0,
-  autoplay: true,
-  autoplayTimeout: 9000,
-  autoplaySpeed: 9000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    1000: {
-      items: 1,
-    },
-    1200: {
-      items: 1
+jQuery(function ($) {
+  // client feedback owl slider
+  $('.client-quote').owlCarousel({
+    nav: true,
+    navText: [
+      '<button class="owl-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+      '<button class="owl-next"><i class="fa-solid fa-arrow-right"></i></button>'
+    ],
+    dots: true,
+    items: 1,
+    loop: true,
+    margin: 0,
+    autoplay: true,
+    autoplayTimeout: 9000,
+    autoplaySpeed: 9000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+      1200: {
+        items: 1
+      }
     }
-  }
-});
+  });
 });
 
 // Load YouTube API
@@ -74,9 +74,9 @@ const videoURL = iframe.getAttribute("data-video");
 
 // Extract YouTube ID from any URL format
 function extractYouTubeID(url) {
-    const reg = /(?:youtube\.com.*(?:\/|v=)|youtu\.be\/)([^&?]+)/;
-    const match = url.match(reg);
-    return match ? match[1] : url; // if only ID entered, use it
+  const reg = /(?:youtube\.com.*(?:\/|v=)|youtu\.be\/)([^&?]+)/;
+  const match = url.match(reg);
+  return match ? match[1] : url; // if only ID entered, use it
 }
 
 const videoID = extractYouTubeID(videoURL);
@@ -102,11 +102,14 @@ const videoBtn = document.getElementById("videoPlayBtn");
 
 videoBtn.addEventListener("click", function () {
   videoBtn.classList.toggle("playVideo");
-  
+  const heroSection = document.querySelector('.home-hero-banner');
+
   if (player.getPlayerState() === 1) {
-    player.pauseVideo(); 
+    player.pauseVideo();
+    heroSection.classList.remove('video-playing');
   } else {
-    player.playVideo(); 
+    player.playVideo();
+    heroSection.classList.add('video-playing');
   }
 });
 
@@ -117,58 +120,58 @@ videoBtn.addEventListener("click", function () {
 
 function animateCounter(element, duration = 4000) {
 
-    const finalValue = element.dataset.number;
+  const finalValue = element.dataset.number;
 
-    const hasPlus = finalValue.includes("+"); 
-    const hasPercent = finalValue.includes("%");
+  const hasPlus = finalValue.includes("+");
+  const hasPercent = finalValue.includes("%");
 
-    const pureNumber = parseInt(finalValue.replace(/[^0-9]/g, ""));
+  const pureNumber = parseInt(finalValue.replace(/[^0-9]/g, ""));
 
-    const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
+  const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
 
-    let startTime = null;
+  let startTime = null;
 
-    setTimeout(() => {
-        function update(timestamp) {
-            if (!startTime) startTime = timestamp;
+  setTimeout(() => {
+    function update(timestamp) {
+      if (!startTime) startTime = timestamp;
 
-            const progress = timestamp - startTime;
-            const rate = Math.min(progress / duration, 1);
-            const current = Math.floor(rate * pureNumber);
+      const progress = timestamp - startTime;
+      const rate = Math.min(progress / duration, 1);
+      const current = Math.floor(rate * pureNumber);
 
-            let output = current;
+      let output = current;
 
-            if (hasPercent) output = output + "%";
-            if (hasPlus) output = output + "+";
+      if (hasPercent) output = output + "%";
+      if (hasPlus) output = output + "+";
 
-            element.textContent = output;
+      element.textContent = output;
 
-            if (rate < 1) requestAnimationFrame(update);
-        }
+      if (rate < 1) requestAnimationFrame(update);
+    }
 
-        requestAnimationFrame(update);
+    requestAnimationFrame(update);
 
-    }, delay);
+  }, delay);
 }
 
 const counters = document.querySelectorAll(".abt-card h3");
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const el = entry.target;
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
 
-            if (!el.dataset.started) {
-                el.dataset.started = "true";
-                animateCounter(el, 1500);
-            }
-        }
-    });
+      if (!el.dataset.started) {
+        el.dataset.started = "true";
+        animateCounter(el, 1500);
+      }
+    }
+  });
 });
 
 counters.forEach((el, index) => {
-    el.dataset.number = el.textContent.trim();  // save original (100%, 25+, etc.)
-    el.dataset.delay = index * 300;             // stagger delay
-    observer.observe(el);
+  el.dataset.number = el.textContent.trim();  // save original (100%, 25+, etc.)
+  el.dataset.delay = index * 300;             // stagger delay
+  observer.observe(el);
 });
 
