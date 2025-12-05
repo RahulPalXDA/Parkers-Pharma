@@ -27,17 +27,29 @@
             <div class="footer-nav">
                 <h3 class="ftr-header">Contact Us</h3>
                 <ul>
-                    <li><span class="icon-box"><img
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/location-icon.png"
-                                alt=""></span> <span class="ftr-cntc-info">AGRI-VETA LTD 26 b Marsland Road Manchester
-                            M333HQ England</span>
+                    <li><span class="icon-box"><i class="fa-solid fa-location-dot"></i></span> <span class="ftr-cntc-info"><?php echo esc_html(get_field('contact_address', 'option')); ?></span>
                     </li>
-                    <li><a href="#"><span class="icon-box"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/call-icon.png"
-                                    alt=""></span><span class="ftr-cntc-info">+1 (555) 123-4567</span></a></li>
-                    <li><a href="#"><span class="icon-box"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/mail-icon.png"
-                                    alt=""></span><span class="ftr-cntc-info">info@agri-veta.com</span></a>
+                    <li>
+                    <?php
+                    $contact_phone = get_field('contact_phone', 'option');
+                    if( $contact_phone ): 
+                        $contact_phone_url = $contact_phone['url'];
+                        $contact_phone_title = $contact_phone['title'];
+                        $contact_phone_target = $contact_phone['target'] ? $contact_phone['target'] : '_self';
+                        ?>
+                        <a href="<?php echo esc_url( $contact_phone_url ); ?>" target="<?php echo esc_attr( $contact_phone_target ); ?>"><span class="icon-box"><i class="fa-solid fa-phone"></i></span><span class="ftr-cntc-info"><?php echo esc_html( $contact_phone_title ); ?></a>
+                    <?php endif; ?>
+                    </li>
+                    <li>
+                    <?php
+                    $contact_email = get_field('contact_email', 'option');
+                    if( $contact_email ): 
+                        $contact_email_url = $contact_email['url'];
+                        $contact_email_title = $contact_email['title'];
+                        $contact_email_target = $contact_email['target'] ? $contact_email['target'] : '_self';
+                        ?>
+                        <a href="<?php echo esc_url( $contact_email_url ); ?>" target="<?php echo esc_attr( $contact_email_target ); ?>"><span class="icon-box"><i class="fa-solid fa-envelope"></i></span><span class="ftr-cntc-info"><?php echo esc_html( $contact_email_title ); ?></a>
+                    <?php endif; ?>
                     </li>
                 </ul>
             </div>
@@ -50,11 +62,22 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <p>Copyright © <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?> - All Rights Reserved.</p>
+            <p>Copyright © <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?> - <?php echo esc_html(get_field('footer_reserved_text', 'option')); ?></p>
+            <?php if (have_rows('footer_links', 'option')): ?>
             <ul>
-                <li><a href="#">Privacy & Cookie Policy</a></li>
-                <li><a href="#">Terms and Conditions</a></li>
+                <?php while (have_rows('footer_links', 'option')):
+                the_row();
+                $footer_link = get_sub_field('footer_link');
+                if ($footer_link):
+                    $footer_link_url = $footer_link['url'];
+                    $footer_link_title = $footer_link['title'];
+                    $footer_link_target = $footer_link['target'] ? $footer_link['target'] : '_self';
+                ?>
+                <li><a href="<?php echo esc_url($footer_link_url); ?>"target="<?php echo esc_attr($footer_link_target); ?>"><?php echo esc_html($footer_link_title); ?></a></li>
+                <?php endif; ?>
+                <?php endwhile; ?>
             </ul>
+            <?php endif; ?>
         </div>
     </div>
 </footer>
