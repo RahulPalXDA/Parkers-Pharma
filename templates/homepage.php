@@ -7,10 +7,18 @@ if (!defined('ABSPATH')) {
  */
 
 get_header(); ?>
-<?php get_template_part('template-parts/homepage', 'hero'); ?>
-<?php get_template_part('template-parts/homepage', 'about'); ?>
-<?php get_template_part('template-parts/homepage', 'key-solutions'); ?>
-<?php get_template_part('template-parts/homepage', 'featured-resources'); ?>
-<?php get_template_part('template-parts/homepage', 'news-insights'); ?>
-<?php get_template_part('template-parts/help', 'card'); ?>
+<?php
+$template_parts = array(
+    'homepage-hero',
+    'homepage-about',
+    'homepage-key-solutions',
+    'homepage-featured-resources',
+    'homepage-news-insights',
+    'help-card',
+);
+
+foreach ($template_parts as $part) {
+    get_template_part('template-parts/' . $part);
+}
+?>
 <?php get_footer(); ?>
