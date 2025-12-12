@@ -1,0 +1,945 @@
+@media only screen and (max-width:1800px) {
+    .home-hero-banner {
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    nav.top-navbar li.nav-item {
+        padding: 0px 0px;
+    }
+    .global-solid-button {
+        padding: 7px 24px;
+        min-height: 40px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .top-bar::after {
+        max-width: 550px;
+    }
+    h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }  
+    h2 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .about-agri-veta-sec .abt-card {
+        margin: 0px 0px 28px;
+        gap: 6px;
+    }
+    .about-agri-veta-sec .abt-card h5 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 44px;
+        color: var(--dark-black-600);
+    }
+    
+    .about-agri-veta-sec .abt-card h3 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    .comprehensive-solutions-sec .global-header {
+        margin: 0 auto 50px;
+    }
+    .education-resource-sec .cntn-box {
+        padding: 30px;
+    }
+    .education-resource-sec .cntn-rgt-thumb img {
+        max-width: 230px;
+    }
+    .stay-update-sec {
+        padding:55px 0px 70px;
+    }
+    footer.footer .flex-box .footer-nav:nth-child(4) {
+        max-width: 270px;
+        padding-right: 15px;
+    }
+    .news-item .cntn-box {
+        gap: 8px;
+        margin-top: 16px;
+        padding-right: 15px;
+    }
+    .comprehensive-solutions-sec {
+        padding: 80px 0px;
+    }
+    .comprehensive-sol-item .cntn-box {
+        min-height: 170px;
+    }
+    .comprehensive-sol-item p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .top-logo-part img {
+        width: 95px;
+    }
+    .simi-blog .cntn-box{
+        min-height: 100px;
+    }
+    .space-up-reduce .cntn-box {
+        margin-top: -35px;
+        margin-bottom: 15px;
+    }
+    .similar-blog-sec {
+        padding: 70px 0px;
+    }
+    .blog-list-sec {
+        padding: 60px 0px 30px;
+    }
+    .product-details-sec, .blog-details-sec {
+        padding: 70px 0px;
+    }
+     
+
+}
+@media only screen and (max-width: 1400px) {
+  .top-logo-part img {
+        width: 65px;
+    }
+    nav.navbar a.nav-link {
+        font-size: 13px;
+    }
+    .global-solid-button {
+        padding: 7px 18px;
+        min-height: 38px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .top-bar ul.call-us-box li, .top-bar ul.call-us-box li a {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .top-bar ul.call-us-box {
+        max-width: 500px;
+        padding: 7px 0;
+    }
+    nav.top-navbar {
+        margin-top: -30px;
+    }
+    .top-bar::after {
+        max-width: 430px;
+    }
+    .top-navbar.sticky .top-logo-part img {
+        width: 60px;
+    }
+    .here-help-box {
+        padding: 45px;
+    }
+    .custom-logo-link img {
+        width: 70px;
+    }
+    .about-agri-veta-sec, .comprehensive-solutions-sec {
+    padding: 70px 0px;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .global-header {
+    margin-bottom: 35px;
+    }
+    .about-agri-veta-sec .abt-card h3 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .about-agri-veta-sec .abt-card {
+        margin: 0px 0px 15px;
+        gap: 5px;
+    }
+    .comprehensive-sol-item h4 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 5px;
+    }
+    
+    .news-item .cntn-box h3 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .banner-video-button img {
+        max-width: 150px;
+    }
+    .contact-info-sec {
+        padding: 70px 0px 70px;
+    }
+    .stay-update-sec {
+        padding:50px 0px 60px;
+    }
+    .contact-us-form {
+        padding: 40px 0px 70px;
+    }
+    .blog-list-sec h2 {
+        margin-bottom: 40px;
+    }
+    .blog-list-sec {
+        padding: 60px 0px 30px;
+    }
+    .similar-blog-sec{
+        padding: 70px 0px;
+    }
+    .similar-blog-sec .global-header {
+        margin: 0 auto 40px;
+    }
+    .product-details-sec, .blog-details-sec {
+        padding: 60px 0px;
+    }
+    nav.navbar .navbar-wrapper .collapse.navbar-collapse {
+        top: -8px;
+    }
+    .abt-feature-cards {
+    margin-top: 30px;
+    }
+    .product-image-box {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .blog-detals-info h3 {
+        font-size: 26px;
+        line-height: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .custom-logo-link img, .top-navbar.sticky .custom-logo-link img{
+        width: 60px;
+    }
+    .global-solid-button {
+        padding: 7px 18px;
+        min-height: 36px;
+        font-weight: 600;
+    }
+    nav.navbar a.nav-link {
+        font-size: 13px;
+        padding-left: 3px !important;
+        padding-right: 4px !important;
+    }
+    nav.navbar .navbar-wrapper .collapse.navbar-collapse {
+        top: -5px;
+    }
+    .abt-feature-cards {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: initial !important;
+    }
+    nav.top-navbar ul.navbar-nav li.nav-item ul.dropdown-menu li a:last-child {
+        padding-bottom: 0px;
+    }
+    nav.top-navbar li.nav-item {
+        padding: 0px 0px;
+    }
+    nav.navbar a.nav-link {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17.58px;
+    }
+    a.navbar-brand.top-logo-part img {
+        max-width: 100px;
+    }
+    .global-solid-button {
+        padding: 7px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }    
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        width: calc(100% - 0px);
+        height: 100%;
+        max-width: 100%;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: -100%;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 15px;
+        -webkit-transition: left .4s cubic-bezier(.6, .1, .68, .53);
+        transition: left .4s cubic-bezier(.6, .1, .68, .53);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        bottom: 0px;
+    }
+    nav.navbar .navbar-wrapper .collapse.navbar-collapse{
+        position: fixed;
+        top: 0px;
+    }
+    .top-bar::after {
+        max-width: 330px;
+    }
+    .navbar-collapse.collapse.show {
+        top: 0 !important;
+        position: fixed !important;
+        left: 0%;
+    }
+    nav.top-navbar li.nav-item.dropdown {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .custom-container,
+    .lg-container {
+        padding: 0px 25px;
+    }
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
+        position: relative;
+        top: -5px;
+    }
+    .navbar-collapse ul.navbar-nav {
+        width: 100%;
+        margin: 40px 0px !important;
+        max-height: calc(100% - 200px);
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .navbar-collapse ul.navbar-nav::-webkit-scrollbar {
+        width:4px;
+      }
+
+    nav.top-navbar li.nav-item {
+        padding: 0px 10px;
+        border-right: 0px solid var(--dark-green-800);
+    }
+
+    nav.top-navbar ul.navbar-nav li.nav-item:first-child {
+        border-left: 0px solid var(--dark-green-800);
+    }
+
+    nav.top-navbar ul.navbar-nav li.nav-item {
+        padding: 11px 0px;
+    }
+
+    .only_mobile_view {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdown-menu.show {
+        border: none;
+        box-shadow: none !important;
+        display: block !important;
+        width: 100%;
+    }
+    a.navbar-brand.top-logo-part img, .mobile_logo img {
+        max-height: 45px;
+    }
+   
+    .dropdown-menu.show li a {
+        color: #6F6E6E;
+    }
+    .only_mobile_view .hamburger-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dropdown-toggle::after{
+        position: absolute;
+        left: auto;
+        right: 0px;
+    }
+    li.nav-item.dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    li.nav-item.dropdown:hover .dropdown-toggle::after {
+        transform: rotate(0deg);
+    }
+    .dropdown-toggle.show::after{
+        transform: rotate(180deg) !important;
+    }
+    li.nav-item.dropdown:hover .dropdown-menu {
+        box-shadow: none !important; 
+    }
+    li.nav-item.dropdown .dropdown-menu li:not(:last-child) {
+        border-bottom: 0px solid #e6e6e6;
+    }
+    .top-bar ul.call-us-box {
+        padding: 0px 0;
+    }
+    .banner-video-button img {
+        max-width: 120px;
+    }
+    .about-agri-veta-sec, .comprehensive-solutions-sec {
+        padding: 60px 0px;
+    }
+    .global-light-button{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+    .blog-detals-info {
+        padding-right: 50px;
+    }
+    h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    p {
+        font-size: 17px;
+        line-height: 29px;
+    }
+    .about-agri-veta-sec .abt-card h3 {
+        font-size: 30px;
+        line-height: 41px;
+    }
+    .about-agri-veta-sec .content-box {
+        gap: 15px;
+    }
+    .about-agri-veta-sec .abt-card h5 {
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .about-agri-veta-sec .abt-card h5 {
+        font-size: 17px;
+        line-height: 35px;
+    }
+    .global-header h5 {
+        padding-left: 20px;
+        font-size: 15px;
+        line-height: 40px;
+        letter-spacing: 3px;
+    }
+    .global-header h5::before {
+        height: 6px;
+        width: 6px;
+        top: 17px;
+        left: 5px;
+    }
+    .comprehensive-sol-item .cntn-box {
+        padding: 20px 15px 15px 15px;
+    }
+    .similar-blog-sec .global-header {
+        margin: 0 auto 25px;
+    }
+    .education-resource-sec .cntn-box {
+        padding: 15px;
+    }
+    .news-item .cntn-box p {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+    .footer-logo, footer.footer .flex-box .footer-nav:nth-child(2), footer.footer .flex-box .footer-nav:nth-child(3){
+        max-width: max-content;
+    }
+    .footer-nav {
+        max-width: 226px;
+    }
+    body:has(.navbar-collapse.show) {
+        overflow: hidden;
+    }
+    .stay-update-sec .global-header {
+        margin: 0 auto 30px;
+    }
+    .comprehensive-sol-item {
+        height: 408px;
+    }
+    .comprehensive-sol-item.simi-blog {
+        height: 400px;
+    }
+    .similar-blog-sec {
+        padding: 60px 0px;
+    }
+    .blog-list-sec h2 {
+        margin-bottom: 25px;
+    }
+    .blog-list-sec {
+        padding: 50px 0px 30px;
+    }
+    .product-list-sec .cntn-box h3 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .product-list-sec {
+        padding: 20px;
+        margin: 15px 0px;
+        gap: 24px;
+    }
+    .product-list-sec .image-box {
+        max-width: 25%;
+        width: 100%;
+    }
+    .product-list-sec .cntn-box h3 {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .product-list-sec .cntn-box p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .product-list-sec .cntn-box h6 {
+        font-size: 15px;
+    }
+    .product-listing-sec {
+        padding: 140px 0px 70px 0px;
+    }
+    .inner-short-banner .banner-product-image {
+        right: calc(10% - 50px);
+        bottom: -100px;
+    }
+    .product-details-sec, .blog-details-sec {
+        padding: 50px 0px;
+    }
+    .blog-user-info span {
+        width: 135px;
+        height: 135px;
+    }
+    .blog-detals-info h3 {
+        font-size: 24px;
+        line-height: 35px;
+        font-weight: 600;
+    }
+    .detail-list p, .btm-proct-details-box p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .btm-proct-details-box h3 {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+    .detail-list {
+        gap: 15px;
+        margin: 15px 0px;
+    }
+    .product-info-rgt h2 {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 54px;
+        margin: 10px 0px 11px;
+    }
+    p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+     .stay-update-sec {
+        padding:45px 0px 60px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    
+    footer.footer {
+        padding: 70px 0px 0px 0px;
+    }
+   
+     .footer-nav {
+        width: 50%;
+        padding-right: 30px;
+    }
+    footer.footer .ftr-header {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    footer.footer .footer-logo img {
+        max-width: 90px;
+    }
+    .footer-copyright {
+        padding: 12px 0px;
+        margin-top: 25px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-logo, footer.footer .flex-box .footer-nav:nth-child(2), footer.footer .flex-box .footer-nav:nth-child(3) {
+        max-width: none;
+        padding-right: 0px;
+        width: 32%;
+    }
+    footer.footer .flex-box .footer-nav:nth-child(4), footer.footer .flex-box .footer-nav:nth-child(5) {
+        max-width: 49%;
+        padding-right: 15px;
+    }
+    footer.footer .flex-box {
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+    .footer-copyright p, .footer-copyright ul li a {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 170%;
+    }
+    .subscribe-section input {
+        margin-bottom: 20px;
+    }
+    .footer.top-ftr-space {
+        padding-top: 170px;
+    }
+    .here-help-box {
+        padding: 20px;
+    }
+    .here-help-box .content-box {
+        gap: 11px;
+    }
+    .news-item {
+        margin: 20px 0px;
+    }
+    .about-agri-veta-sec, .comprehensive-solutions-sec{
+        padding: 50px 0px;
+    }
+    .blog-detals-info {
+        padding-right: 0px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    p, .detail-list p, .btm-proct-details-box p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .about-agri-veta-sec .content-box{
+        margin-top: 30px;
+    }
+    .about-agri-veta-sec .abt-feature-cards {
+        width: 100%;
+    }
+    .comprehensive-sol-item {
+        margin: 15px 0px;
+    }
+    
+    .comprehensive-solutions-sec .global-header {
+        margin: 0 auto 20px;
+    }
+    .contact-info-item span i {
+    font-size: 24px;
+    }
+    .contact-info-item span {
+        height: 60px;
+        width: 60px;
+    }
+    .contact-info-sec {
+        padding: 50px 0px 52px;
+    }
+    .contact-us-form form {
+        padding: 40px;
+    }
+    .cntc-form-inner h2 {
+        margin-bottom: 28px;
+    }
+    .contact-us-form {
+        padding: 40px 0px 60px;
+    }
+    .contact-info-item {
+        margin: 15px 0px;
+    }
+    .inner-short-banner .banner-product-image img {
+        max-height: 280px;
+    }
+    .inner-short-banner .banner-product-image {
+        display: none;
+    }
+    .product-listing-sec {
+        padding: 50px 0px 50px 0px;
+    }
+    .product-list-sec .cntn-box h3 {
+        font-size: 27px;
+        line-height: 38px;
+    }
+    .product-details-sec, .blog-details-sec {
+        padding: 45px 0px;
+    }
+    .blog-details-sec .row{
+        flex-direction: column-reverse;
+    }
+    .product-info-rgt {
+        padding-left: 15px;
+        margin-top: 30px;
+    }
+    .stay-update-sec {
+        padding:40px 0px 55px;
+    }
+    .blog-detals-info h3 {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    .blog-user-info span {
+        width: 125px;
+        height: 125px;
+    }
+    .blog-user-info {
+        row-gap: 5px;
+    }
+    .blog-user-info h4 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    footer.footer {
+        padding:60px 0px 0px 0px;
+    }
+    .global-solid-button {
+        padding: 7px 18px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+    .hero-banner-inner {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 70px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    footer.footer .ftr-header {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
+    .about-agri-veta-sec, .comprehensive-solutions-sec{
+        padding: 45px 0px;
+    }
+    .hero-banner-inner span {
+        display: flex;
+        align-items: start;
+        gap: 11px;
+        flex-direction: column;
+    }
+    .education-resource-sec .image-box {
+        margin-top: 30px;
+    }
+    .comprehensive-sol-item p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .contact-us-form form {
+        padding: 20px;
+    }
+    .contact-info-item {
+        margin: 15px 0px;
+        height: auto;
+        padding: 40px 20px;
+    }
+    .contact-us-form {
+        padding: 30px 0px 50px;
+    }
+    .contact-info-sec {
+        padding: 40px 0px 40px;
+    }
+    .inner-short-banner {
+        height: 310px;
+        padding: 40px 0px;
+    }
+    .contact-info-item span {
+        height: 50px;
+        width: 50px;
+    }
+    .contact-info-item span i {
+        font-size: 18px;
+    }
+    .similar-blog-sec .global-header {
+        margin: 0 auto 20px;
+    }
+    .product-details-sec, .blog-details-sec {
+        padding: 40px 0px;
+    }
+    .product-info-rgt {
+        padding-left: 0px;
+        margin-top: 40px;
+    }
+    p, .detail-list p, .btm-proct-details-box p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .detail-list h3 {
+        width: 165px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .product-image-box {
+        padding: 17px;
+    }
+    .stay-update-sec {
+        padding:35px 0px 45px;
+    }
+    .btm-proct-details-box h3 {
+        font-size: 25px;
+        line-height: 29px;
+        margin-bottom: 10px;
+    }
+    .product-info-rgt h2 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 39px;
+        margin: 10px 0px 11px;
+    }
+    .navbar-collapse ul.navbar-nav {
+        margin: 18px 0px !important;
+    }
+    .hero-banner-inner h1::before {
+        transform: scale(1);
+    }
+    .blog-detals-info h3 {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width:680px) {
+    
+    footer.footer .flex-box {
+        justify-content: space-between;
+    }
+    footer.footer .footer-logo {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+    .news-item .image-box {
+        height: 240px;
+    }
+    .footer-nav {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 20px;
+    }
+    .home-hero-banner {
+        height: auto;
+        min-height: 85vh;
+    }
+    footer.footer .flex-box .footer-nav:nth-child(2), footer.footer .flex-box .footer-nav:nth-child(3) {
+        max-width: none;
+        padding-right: 15px;
+        width: 50%;
+    }
+    .about-agri-veta-sec, .comprehensive-solutions-sec {
+        padding: 40px 0px;
+    }
+    .comprehensive-sol-item .cntn-box {
+        padding: 20px 15px 15px 15px;
+    }
+    .global-header p {
+        margin: 14px 0px;
+    }
+    .global-header {
+        margin-bottom: 20px;
+    }
+        h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    .contact-us-form form {
+        padding: 15px;
+    }
+    .inner-short-banner {
+        height: 270px;
+        padding: 35px 0px;
+    }
+    .comprehensive-sol-item.simi-blog {
+        height: 290px;
+    }
+    .similar-blog-sec {
+        padding: 40px 0px;
+    }
+    .product-listing-sec {
+        padding: 40px 0px 40px 0px;
+    }
+}
+@media only screen and (max-width:575px) {
+    .home-hero-banner {
+        min-height: 70vh;
+    }
+    .contact-us-form .global-solid-button {
+        min-width: 150px;
+        border: 0px;
+    }
+    .contact-us-form .wpcf7-spinner{
+        position: absolute;
+    }
+    .contact-info-item {
+        margin: 8px 0px;
+        height: auto;
+        padding: 30px 15px;
+    }
+}
+@media only screen and (max-width:480px) {
+    footer.footer .flex-box .footer-nav:nth-child(2), footer.footer .flex-box .footer-nav:nth-child(3), footer.footer .flex-box .footer-nav:nth-child(4), footer.footer .flex-box .footer-nav:nth-child(5) {
+        max-width: none;
+        padding-right: 0px;
+        width: 100%;
+    }
+    footer.footer .footer-logo {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+    footer.footer .flex-box {
+        justify-content: start;
+        row-gap: 0px;
+    }
+     footer.footer .footer-logo {
+        margin-bottom: 20px;
+     }
+     .custom-logo-link img, .top-navbar.sticky .custom-logo-link img {
+        width: 45px;
+    }
+    .top-bar::after {
+        max-width: 290px;
+    }
+    .top-bar::after {
+        max-width: 256px;
+    }
+    .footer-copyright ul {
+        gap: 0;
+        flex-direction: column;
+    }
+    .product-list-sec {
+        padding: 20px;
+        margin: 15px 0px;
+        gap: 18px;
+        flex-direction: column;
+    }
+    .product-list-sec .image-box {
+        max-width: 100%;
+        width: 100%;
+    }
+    .product-info-rgt .detail-list, .detail-list {
+        gap: 19px;
+        flex-direction: column;
+    }
+    .detail-list h3{
+        width: 100%;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        top: 4px;
+    }
+}
