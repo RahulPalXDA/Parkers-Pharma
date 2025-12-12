@@ -27,7 +27,7 @@ $query = new WP_Query($args);
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                         <div class="news-events-item">
                             <div class="thumbnail-box">
-                                <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+                                <!-- <span class="play-icon"><i class="fa-solid fa-play"></i></span> -->
                                 <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>"
                                     alt="<?php the_title(); ?>">
                             </div>
