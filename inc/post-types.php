@@ -255,3 +255,82 @@ function parkers_contact_submission_sortable_columns($columns)
     return $columns;
 }
 add_filter('manage_edit-contact_submission_sortable_columns', 'parkers_contact_submission_sortable_columns');
+
+function parkers_register_resources_cpt()
+{
+    $labels = array(
+        'name' => _x('Resources', 'Post Type General Name', 'parkers-pharma'),
+        'singular_name' => _x('Resource', 'Post Type Singular Name', 'parkers-pharma'),
+        'menu_name' => __('Resources', 'parkers-pharma'),
+        'name_admin_bar' => __('Resource', 'parkers-pharma'),
+        'archives' => __('Resource Archives', 'parkers-pharma'),
+        'attributes' => __('Resource Attributes', 'parkers-pharma'),
+        'parent_item_colon' => __('Parent Resource:', 'parkers-pharma'),
+        'all_items' => __('All Resources', 'parkers-pharma'),
+        'add_new_item' => __('Add New Resource', 'parkers-pharma'),
+        'add_new' => __('Add New', 'parkers-pharma'),
+        'new_item' => __('New Resource', 'parkers-pharma'),
+        'edit_item' => __('Edit Resource', 'parkers-pharma'),
+        'update_item' => __('Update Resource', 'parkers-pharma'),
+        'view_item' => __('View Resource', 'parkers-pharma'),
+        'view_items' => __('View Resources', 'parkers-pharma'),
+        'search_items' => __('Search Resource', 'parkers-pharma'),
+        'not_found' => __('Not found', 'parkers-pharma'),
+        'not_found_in_trash' => __('Not found in Trash', 'parkers-pharma'),
+    );
+    $args = array(
+        'label' => __('Resource', 'parkers-pharma'),
+        'description' => __('Post Type for Resources', 'parkers-pharma'),
+        'labels' => $labels,
+        'supports' => array('title'), // Only title
+        'taxonomies' => array('resources_cat'),
+        'hierarchical' => false,
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 20,
+        'menu_icon' => 'dashicons-book',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => false,
+        'can_export' => true,
+        'has_archive' => false,
+        'exclude_from_search' => true,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+        'rewrite' => false,
+        'show_in_rest' => true,
+    );
+    register_post_type('resources', $args);
+}
+add_action('init', 'parkers_register_resources_cpt', 0);
+
+function parkers_register_resources_taxonomies()
+{
+    $labels = array(
+        'name' => _x('Resource Categories', 'taxonomy general name', 'parkers-pharma'),
+        'singular_name' => _x('Resource Category', 'taxonomy singular name', 'parkers-pharma'),
+        'search_items' => __('Search Resource Categories', 'parkers-pharma'),
+        'all_items' => __('All Resource Categories', 'parkers-pharma'),
+        'parent_item' => __('Parent Resource Category', 'parkers-pharma'),
+        'parent_item_colon' => __('Parent Resource Category:', 'parkers-pharma'),
+        'edit_item' => __('Edit Resource Category', 'parkers-pharma'),
+        'update_item' => __('Update Resource Category', 'parkers-pharma'),
+        'add_new_item' => __('Add New Resource Category', 'parkers-pharma'),
+        'new_item_name' => __('New Resource Category Name', 'parkers-pharma'),
+        'menu_name' => __('Categories', 'parkers-pharma'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => false,
+        'public' => false,
+        'show_in_rest' => true,
+    );
+
+    register_taxonomy('resources_cat', array('resources'), $args);
+}
+add_action('init', 'parkers_register_resources_taxonomies', 0);

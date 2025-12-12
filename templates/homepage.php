@@ -27,4 +27,7 @@ foreach ($parts as $part) {
 get_template_part('template-parts/shared/help', 'card');
 ?>
 
-<?php get_footer(); ?>
+<?php
+set_query_var('top_ftr_space', true);
+get_footer();
+?>

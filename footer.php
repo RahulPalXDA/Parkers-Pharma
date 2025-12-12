@@ -2,9 +2,10 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
+$top_ftr_space = get_query_var('top_ftr_space');
 ?>
 <!-- footer start -->
-<footer class="footer <?php echo is_front_page() ? 'top-ftr-space' : ''; ?>">
+<footer class="footer <?php echo $top_ftr_space ? 'top-ftr-space' : ''; ?>">
     <div class="custom-container">
         <div class="flex-box">
             <div class="footer-logo">
