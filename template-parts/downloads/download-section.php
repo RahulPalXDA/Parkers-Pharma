@@ -16,6 +16,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
         $categories[$term->slug] = $term->name;
     }
 }
+asort($categories, SORT_NATURAL | SORT_FLAG_CASE);
 ?>
 <!-- download resource start -->
 <section class="download-resource-sec">
@@ -66,7 +67,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
                     <?php if ($query->have_posts()):
                         while ($query->have_posts()):
                             $query->the_post();
-                            $file = get_field('file'); 
+                            $file = get_field('file');
                             $file_url = is_array($file) ? $file['url'] : $file;
                             ?>
                             <div class="download-res-item">
