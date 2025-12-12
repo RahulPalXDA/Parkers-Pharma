@@ -18,7 +18,7 @@ function parkers_contact_form_handler()
 {
     error_log('Parkers Contact Form: Handler triggered');
     if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'parkers_contact_form_nonce')) {
-        wp_send_json_error(array('message' => 'Security check failed.'), 403);
+        wp_send_json_error(array('message' => __('Security check failed.', 'parkers-pharma')), 403);
         exit;
     }
 
@@ -42,29 +42,29 @@ function parkers_contact_form_handler()
 
         // Check for XSS attempts (script tags)
         if (preg_match($xss_pattern, $value)) {
-            wp_send_json_error(array('message' => 'Invalid input detected.'), 400);
+            wp_send_json_error(array('message' => __('Invalid input detected.', 'parkers-pharma')), 400);
             exit;
         }
 
         if ($field === 'first_name' && empty($value)) {
-            $errors[] = 'First name is required.';
+            $errors[] = __('First name is required.', 'parkers-pharma');
         }
         if ($field === 'last_name' && empty($value)) {
-            $errors[] = 'Last name is required.';
+            $errors[] = __('Last name is required.', 'parkers-pharma');
         }
         if ($field === 'email' && empty($value)) {
-            $errors[] = 'Email is required.';
+            $errors[] = __('Email is required.', 'parkers-pharma');
         }
         if ($field === 'phone' && empty($value)) {
-            $errors[] = 'Phone number is required.';
+            $errors[] = __('Phone number is required.', 'parkers-pharma');
         }
         if ($field === 'message' && empty($value)) {
-            $errors[] = 'Message is required.';
+            $errors[] = __('Message is required.', 'parkers-pharma');
         }
 
         if (!empty($value) && isset($patterns[$field])) {
             if (!preg_match($patterns[$field], $value)) {
-                $errors[] = ucfirst(str_replace('_', ' ', $field)) . ' is invalid.';
+                $errors[] = sprintf(__('%s is invalid.', 'parkers-pharma'), ucfirst(str_replace('_', ' ', $field)));
             }
         }
 
@@ -122,10 +122,10 @@ function parkers_contact_form_handler()
     // Success response
     if ($submission_id) {
         wp_send_json_success(array(
-            'message' => 'Thank you! Your message has been sent successfully.'
+            'message' => __('Thank you! Your message has been sent successfully.', 'parkers-pharma')
         ));
     } else {
-        wp_send_json_error(array('message' => 'Failed to process submission. Please try again.'), 500);
+        wp_send_json_error(array('message' => __('Failed to process submission. Please try again.', 'parkers-pharma')), 500);
     }
     exit;
 }

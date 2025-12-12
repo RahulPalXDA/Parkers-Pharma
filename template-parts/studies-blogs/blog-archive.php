@@ -37,7 +37,8 @@ $query = new WP_Query($args);
                                 <h6><span><i class="fa-solid fa-calendar-days"></i></span><?php echo get_the_date(); ?></h6>
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <?php the_excerpt(); ?>
-                                <a href="<?php the_permalink(); ?>" class="global-light-button">Learn More</a>
+                                <a href="<?php the_permalink(); ?>"
+                                    class="global-light-button"><?php _e('Learn More', 'parkers-pharma'); ?></a>
                             </div>
                         </div>
                     </div>

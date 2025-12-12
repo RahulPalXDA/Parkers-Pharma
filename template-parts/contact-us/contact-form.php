@@ -12,35 +12,36 @@ global $post_id;
                 <?php wp_nonce_field('parkers_contact_form_nonce', 'contact_nonce'); ?>
                 <div class="row form-row">
                     <div class="col-xl-6 col-md-6 col-sm-12">
-                        <label for="first_name">First Name</label>
+                        <label for="first_name"><?php _e('First Name', 'parkers-pharma'); ?></label>
                         <input type="text" class="form-control" name="first_name" id="first_name"
-                            placeholder="Enter first name" required>
+                            placeholder="<?php esc_attr_e('Enter first name', 'parkers-pharma'); ?>" required>
                     </div>
                     <div class="col-xl-6 col-md-6 col-sm-12">
-                        <label for="last_name">Last Name</label>
+                        <label for="last_name"><?php _e('Last Name', 'parkers-pharma'); ?></label>
                         <input type="text" class="form-control" name="last_name" id="last_name"
-                            placeholder="Enter last name">
+                            placeholder="<?php esc_attr_e('Enter last name', 'parkers-pharma'); ?>">
                     </div>
                     <div class="col-xl-6 col-md-6 col-sm-12">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email"
-                            required>
+                        <label for="email"><?php _e('Email', 'parkers-pharma'); ?></label>
+                        <input type="email" class="form-control" name="email" id="email"
+                            placeholder="<?php esc_attr_e('Enter your email', 'parkers-pharma'); ?>" required>
                     </div>
                     <div class="col-xl-6 col-md-6 col-sm-12">
-                        <label for="phone">Phone number</label>
+                        <label for="phone"><?php _e('Phone number', 'parkers-pharma'); ?></label>
                         <input type="tel" class="form-control" name="phone" id="phone"
-                            placeholder="Enter your phone number">
+                            placeholder="<?php esc_attr_e('Enter your phone number', 'parkers-pharma'); ?>">
                     </div>
                     <div class="col-12">
-                        <label for="message">How can we help you?</label>
+                        <label for="message"><?php _e('How can we help you?', 'parkers-pharma'); ?></label>
                         <textarea class="form-control" rows="5" name="message" id="message"
-                            placeholder="Write a message *" required></textarea>
+                            placeholder="<?php esc_attr_e('Write a message *', 'parkers-pharma'); ?>"
+                            required></textarea>
                     </div>
                     <div class="col-12 text-center">
                         <div id="form-response" style="margin-bottom: 15px; display: none;"></div>
                         <button type="submit" id="submit-btn" class="global-solid-button" disabled
                             style="cursor: not-allowed;">
-                            Send Now
+                            <?php _e('Send Now', 'parkers-pharma'); ?>
                         </button>
                     </div>
                 </div>
@@ -114,7 +115,7 @@ global $post_id;
                         if (button.disabled) return;
 
                         button.disabled = true;
-                        button.textContent = 'Sending...';
+                        button.textContent = '<?php echo esc_js(__('Sending...', 'parkers-pharma')); ?>';
                         responseDiv.style.display = 'none';
 
                         const formData = new FormData(form);
@@ -140,14 +141,14 @@ global $post_id;
                                 button.disabled = true;
                                 button.style.cursor = "not-allowed";
                             } else {
-                                responseDiv.innerHTML = '<p style="color: red; font-weight: 600;">' + (result.data?.message || 'An error occurred.') + '</p>';
+                                responseDiv.innerHTML = '<p style="color: red; font-weight: 600;">' + (result.data?.message || '<?php echo esc_js(__('An error occurred.', 'parkers-pharma')); ?>') + '</p>';
                             }
                         } catch (error) {
                             console.error('Fetch error:', error);
                             responseDiv.style.display = 'block';
-                            responseDiv.innerHTML = '<p style="color: red; font-weight: 600;">Network error. Please try again.</p>';
+                            responseDiv.innerHTML = '<p style="color: red; font-weight: 600;"><?php echo esc_js(__('Network error. Please try again.', 'parkers-pharma')); ?></p>';
                         } finally {
-                            button.textContent = 'Send Now';
+                            button.textContent = '<?php echo esc_js(__('Send Now', 'parkers-pharma')); ?>';
                             checkFormValidity();
                         }
                     });
