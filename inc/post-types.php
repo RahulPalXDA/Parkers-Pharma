@@ -1,12 +1,8 @@
 <?php
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
+    exit; 
 }
-/**
- * Register Custom Post Types and Taxonomies
- *
- * @package Parkers_Pharma
- */
+
 
 function parkers_register_product_cpt()
 {
@@ -44,7 +40,7 @@ function parkers_register_product_cpt()
         'description' => __('Post Type for Products', 'parkers-pharma'),
         'labels' => $labels,
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-        'taxonomies' => array('product_cat'), // Replaced standard categories with custom taxonomy
+        'taxonomies' => array('product_cat'), 
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
@@ -96,9 +92,7 @@ function parkers_register_product_taxonomies()
 }
 add_action('init', 'parkers_register_product_taxonomies', 0);
 
-/**
- * Disable date-based archives for Products
- */
+
 function parkers_disable_cpt_date_archives($query)
 {
     if (!is_admin() && $query->is_main_query()) {
@@ -136,7 +130,7 @@ function parkers_register_contact_submission_cpt()
 }
 add_action('init', 'parkers_register_contact_submission_cpt');
 
-// Add meta box for contact submission details
+
 function parkers_contact_submission_meta_box()
 {
     add_meta_box(
@@ -190,7 +184,7 @@ function parkers_contact_submission_meta_box_callback($post)
     <?php
 }
 
-// Save meta box data
+
 function parkers_save_contact_submission_meta($post_id)
 {
     if (!isset($_POST['contact_meta_nonce']) || !wp_verify_nonce($_POST['contact_meta_nonce'], 'parkers_contact_meta_nonce')) {
@@ -212,7 +206,7 @@ function parkers_save_contact_submission_meta($post_id)
 }
 add_action('save_post_contact_submission', 'parkers_save_contact_submission_meta');
 
-// Add custom columns to admin list
+
 function parkers_contact_submission_columns($columns)
 {
     $new_columns = array(
@@ -227,7 +221,7 @@ function parkers_contact_submission_columns($columns)
 }
 add_filter('manage_contact_submission_posts_columns', 'parkers_contact_submission_columns');
 
-// Populate custom columns
+
 function parkers_contact_submission_column_content($column, $post_id)
 {
     switch ($column) {
@@ -247,7 +241,7 @@ function parkers_contact_submission_column_content($column, $post_id)
 }
 add_action('manage_contact_submission_posts_custom_column', 'parkers_contact_submission_column_content', 10, 2);
 
-// Make columns sortable
+
 function parkers_contact_submission_sortable_columns($columns)
 {
     $columns['contact_name'] = 'contact_name';
@@ -282,7 +276,7 @@ function parkers_register_resources_cpt()
         'label' => __('Resource', 'parkers-pharma'),
         'description' => __('Post Type for Resources', 'parkers-pharma'),
         'labels' => $labels,
-        'supports' => array('title'), // Only title
+        'supports' => array('title'), 
         'taxonomies' => array('resources_cat'),
         'hierarchical' => false,
         'public' => false,

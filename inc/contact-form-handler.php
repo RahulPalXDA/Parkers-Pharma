@@ -40,7 +40,7 @@ function parkers_contact_form_handler()
         $value = isset($_POST[$field]) ? trim($_POST[$field]) : '';
         $value = stripslashes($value);
 
-        // Check for XSS attempts (script tags)
+        
         if (preg_match($xss_pattern, $value)) {
             wp_send_json_error(array('message' => __('Invalid input detected.', 'parkers-pharma')), 400);
             exit;
@@ -68,11 +68,11 @@ function parkers_contact_form_handler()
             }
         }
 
-        // Use WordPress sanitization (no HTML encoding needed for plain text email)
+        
         $data[$field] = sanitize_text_field($value);
     }
 
-    // Re-sanitize email and message with appropriate functions
+    
     $data['email'] = sanitize_email($_POST['email'] ?? '');
     $data['message'] = sanitize_textarea_field($_POST['message'] ?? '');
 
@@ -80,7 +80,7 @@ function parkers_contact_form_handler()
         wp_send_json_error(array('message' => implode(' ', $errors)), 400);
         exit;
     }
-    // Store submission in database as backup
+    
     $submission_id = wp_insert_post(array(
         'post_type' => 'contact_submission',
         'post_status' => 'private',
@@ -95,10 +95,10 @@ function parkers_contact_form_handler()
         )
     ));
 
-    // Send email with form data
+    
     $admin_email = get_option('admin_email');
     $site_name = get_bloginfo('name');
-    // Using working subject format
+    
     $subject = '[' . $site_name . '] Contact Form - New Message';
     $email_body = "You have received a new contact form message.\n\n";
     $email_body .= "Sender Details:\n";
@@ -108,18 +108,18 @@ function parkers_contact_form_handler()
     $email_body .= "Message:\n" . $data['message'] . "\n\n";
     $email_body .= "Sent at: " . current_time('mysql');
 
-    // Set From name to site name instead of WordPress
+    
     $headers = array('From: ' . $site_name . ' <' . $admin_email . '>');
     $sent = wp_mail($admin_email, $subject, $email_body, $headers);
 
-    // Log for debugging
+    
     if (!$sent) {
         error_log('Parkers Contact Form: Email failed to ' . $admin_email . ' | Submission ID: ' . $submission_id);
     } else {
         error_log('Parkers Contact Form: Email sent successfully to ' . $admin_email);
     }
 
-    // Success response
+    
     if ($submission_id) {
         wp_send_json_success(array(
             'message' => __('Thank you! Your message has been sent successfully.', 'parkers-pharma')

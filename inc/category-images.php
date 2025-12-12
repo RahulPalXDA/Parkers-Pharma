@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Category Image Support
+
 function parkers_admin_scripts()
 {
     wp_enqueue_media();
@@ -11,7 +11,7 @@ function parkers_admin_scripts()
 }
 add_action('admin_enqueue_scripts', 'parkers_admin_scripts');
 
-// Product Category - Image field only (for side image)
+
 function parkers_add_product_cat_image_field($taxonomy)
 {
     ?>
@@ -69,7 +69,7 @@ function parkers_save_product_cat_image($term_id, $tt_id)
 add_action('created_product_cat', 'parkers_save_product_cat_image', 10, 2);
 add_action('edited_product_cat', 'parkers_save_product_cat_image', 10, 2);
 
-// Post Category - Banner image field only
+
 function parkers_add_category_banner_field($taxonomy)
 {
     ?>

@@ -1,8 +1,5 @@
 <?php
-/**
- * Product Category Taxonomy Template
- * Loads archive-product.php since they share the same layout
- */
+
 if (!defined('ABSPATH')) {
     exit;
 }

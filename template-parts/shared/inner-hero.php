@@ -45,7 +45,7 @@ if ($is_product_archive) {
     $page_title = $term->name;
     $banner_image = '';
 
-    // Check current term and ancestors for banner image
+    
     $terms_to_check = array_merge([$term->term_id], get_ancestors($term->term_id, $term->taxonomy));
     foreach ($terms_to_check as $term_id) {
         $banner_id = get_term_meta($term_id, 'category-banner-id', true);
@@ -54,7 +54,7 @@ if ($is_product_archive) {
             break;
         }
     }
-    // Fallback to default banner from options
+    
     if (empty($banner_image)) {
         $banner_image = get_field('default_banner_image', 'option');
     }

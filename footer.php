@@ -1,6 +1,6 @@
 <?php
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
+    exit; 
 }
 $top_ftr_space = get_query_var('top_ftr_space');
 ?>

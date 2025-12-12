@@ -1,6 +1,6 @@
 <?php
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
+    exit; 
 }
 class Footer_Menu_Walker extends Walker_Nav_Menu
 {

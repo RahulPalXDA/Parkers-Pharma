@@ -66,7 +66,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
                     <?php if ($query->have_posts()):
                         while ($query->have_posts()):
                             $query->the_post();
-                            $file = get_field('file'); // Ensure your ACF field name is 'file'
+                            $file = get_field('file'); 
                             $file_url = is_array($file) ? $file['url'] : $file;
                             ?>
                             <div class="download-res-item">

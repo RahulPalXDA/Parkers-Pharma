@@ -1,11 +1,9 @@
 <?php
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
+    exit; 
 }
 
-/**
- * Basic theme functions.
- */
+
 
 require_once get_template_directory() . '/inc/theme_setup.php';
 require_once get_template_directory() . '/inc/register_menus.php';

@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
  * Template Name: Contact Us
  */
 
-// Set global post ID for template parts
+
 global $post_id;
 $post_id = get_the_ID();
 ?>

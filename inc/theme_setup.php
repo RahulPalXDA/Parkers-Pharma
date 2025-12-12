@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 
 function basic_theme_setup()
 {
-    // Add support for document title tag
+    
     add_theme_support('title-tag');
     add_theme_support('custom-logo', array(
         'height' => 115,
@@ -15,7 +15,7 @@ function basic_theme_setup()
     ));
     add_theme_support('post-thumbnails');
 
-    // Load theme text domain
+    
     load_theme_textdomain('parkers-pharma', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'basic_theme_setup');
@@ -30,7 +30,7 @@ function enable_excerpt_for_all_post_types()
 
 add_action('init', 'enable_excerpt_for_all_post_types');
 
-// Add social media contact fields to user profiles
+
 function parkers_user_contact_methods($methods)
 {
     $methods['linkedin'] = __('LinkedIn URL', 'parkers-pharma');

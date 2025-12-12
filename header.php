@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
+    exit; 
 }
 ?>
 <html <?php language_attributes(); ?>>
